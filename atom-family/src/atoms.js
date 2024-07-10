@@ -3,7 +3,7 @@ import { TODOS } from "./todos";
 
 export const todosAtomFamily = atomFamily({ //Let's You create multiple dynamic atoms;
   key: 'todosAtomFamily',
-  default: id => {
+  default: (id) => {   //basically ek function bana do
     return TODOS.find(x => x.id === id)      //Creating an Atom Family and finding that specific toDo item;
   },                                         //Data ek js file mei waha se pura import kar liya and usme filter chala dia
 });
